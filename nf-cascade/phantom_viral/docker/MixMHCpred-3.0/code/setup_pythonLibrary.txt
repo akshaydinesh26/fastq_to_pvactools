@@ -1,6 +1,0 @@
-numpy
-pandas
-scipy
-argparse
-logomaker
-matplotlib
