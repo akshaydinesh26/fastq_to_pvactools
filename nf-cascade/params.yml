@@ -1,0 +1,24 @@
+workflows: 'sarek,rnaseq,rnafusion'
+general:
+  wf_opts: '-resume -ansi-log false'
+sarek:
+  #params_file: 'tests/data/fetchngs_rnaseq_params.yml'
+  params_file: '/home/microcrispr/Desktop/nextflow_workflow/code/sarek_params.yaml'
+  input: '/home/microcrispr/Desktop/nextflow_workflow/code/sarek_input.csv'
+  wf_opts: '-profile docker -r 3.5.1'
+  #add_config: "${projectDir}/configs/multiqc.config"
+rnaseq:
+  params_file: '/home/microcrispr/Desktop/nextflow_workflow/code/rnaseq_params.yaml'
+  input: '/home/microcrispr/Desktop/nextflow_workflow/code/rnaseq_input.csv'
+  wf_opts: '-profile docker -r 3.19.0'
+  #add_config: "${projectDir}/configs/multiqc.config"
+rnafusion:
+  params_file: '/home/microcrispr/Desktop/nextflow_workflow/code/rnafusion.yaml'
+  input: '/home/microcrispr/Desktop/nextflow_workflow/code/rnafusion_input.csv'
+  wf_opts: '-profile docker -r 3.0.2'
+  #add_config: "${projectDir}/configs/multiqc.config"
+hlatyping:
+  #params_file: '/home/microcrispr/Desktop/nextflow_workflow/code/hlatyping.yaml'
+  input: '/home/microcrispr/Desktop/nextflow_workflow/code/hlatyping_input.csv'
+  wf_opts: '-profile docker -r 2.1.0'
+  #add_config: "${projectDir}/configs/multiqc.config"

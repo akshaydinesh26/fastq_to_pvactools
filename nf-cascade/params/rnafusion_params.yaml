@@ -1,0 +1,6 @@
+arriba              : true
+genomes_base        : '/backup/volume/common_files/fusion_refrences'
+skip_vis            : true
+max_cpus            : 16
+max_memory          : '128.GB'
+max_time            : '240.h'

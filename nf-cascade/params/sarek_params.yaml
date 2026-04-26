@@ -1,0 +1,28 @@
+# input                       : './samplesheet.csv'
+# outdir                      : './sarek_output/'
+# genome                      : 'GATK.GRCh38'
+# intervals                   : 'df.bed'
+# aligner                     : 'bwa-mem2'
+# tools                       : 'mutect2'
+# save_mapped                 : 'true'
+# only_paired_variant_calling : 'true'
+# save_reference              : 'true'
+# multiqc_title               : 'Sarek_out_neoantigen'
+# resume                      : 'false'
+
+#split_fastq                 : 10000000
+genome                      : 'GATK.GRCh38'
+igenomes_base               : '/backup/volume/common_files/igenomes/GATK_GRCh38'
+aligner                     : 'bwa-mem'
+tools                       : 'mutect2'
+step                        : 'mapping'
+save_mapped                 : true
+only_paired_variant_calling : true
+save_reference              : true
+multiqc_title               : 'Sarek_out_neoantigen'
+#no_intervals                : false
+joint_mutect2               : true
+wes                         : true
+intervals                   : '/backup/volume/common_files/hg38_exome_comp_spikein_v2.0.2_targets_sorted.re_annotated.bed'
+#fasta                       : '/home/akshay/Desktop/phantom/Homo_sapiens.GRCh38.dna.chromosome.4.fa'
+#pon                         : '/media/microcrispr/28fa86dc-6d22-4a6e-bfbe-368386a488e01/refrences/Genes.gencode/1000g_pon.hg38.vcf.gz'

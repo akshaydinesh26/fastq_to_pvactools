@@ -1,0 +1,34 @@
+reference
+├── epiTOPes_v7_immunogenic_peptides.virus.final.txt
+├── immunogenic_epitopes_for_mixmhc.tsv
+├── immunogenic_epitopes_old.tsv
+├── immunogenic_epitopes.tsv
+├── reference.LUT.human.gtf
+├── reference.LUT.virus.gtf
+├── reference.LUT.virus_old.gtf
+├── reference.proteome.fasta
+├── reference.proteome.virus.fasta
+├── reference_virus.gtf
+├── star_index
+│   ├── chrLength.txt
+│   ├── chrNameLength.txt
+│   ├── chrName.txt
+│   ├── chrStart.txt
+│   ├── exonGeTrInfo.tab
+│   ├── exonInfo.tab
+│   ├── final.gtf
+│   ├── final_renamed.fasta
+│   ├── geneInfo.tab
+│   ├── Genome
+│   ├── genomeParameters.txt
+│   ├── reference_virus.gtf
+│   ├── SA
+│   ├── SAindex
+│   ├── sjdbInfo.txt
+│   ├── sjdbList.fromGTF.out.tab
+│   ├── sjdbList.out.tab
+│   ├── transcriptInfo.tab
+│   └── virus_genome.fasta
+└── virus_genome.fasta
+
+2 directories, 30 files

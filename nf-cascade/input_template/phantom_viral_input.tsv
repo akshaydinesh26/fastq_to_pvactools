@@ -1,0 +1,2 @@
+patient_id	fastq_1	fastq_2	strandness	hla_alleles
+${patient}	${rna_fastq_1}	${rna_fastq_2}	${strandness}

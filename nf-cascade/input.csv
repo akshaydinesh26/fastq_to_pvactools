@@ -1,0 +1,2 @@
+patient,sex,rna_fastq_1,rna_fastq_2,normal_dna_fastq_1,normal_dna_fastq_2,tumor_dna_fastq_1,tumor_dna_fastq_2,hla,strandness
+patient1,XX,/home/akshay/Desktop/phantom/phantom_test_data/rna_tumor_1.fastq.gz,/home/akshay/Desktop/phantom/phantom_test_data/rna_tumor_2.fastq.gz,/home/akshay/Desktop/phantom/phantom_test_data/normal_1.fastq.gz,/home/akshay/Desktop/phantom/phantom_test_data/normal_2.fastq.gz,/home/akshay/Desktop/phantom/phantom_test_data/tumor_1.fastq.gz,/home/akshay/Desktop/phantom/phantom_test_data/tumor_2.fastq.gz,yes

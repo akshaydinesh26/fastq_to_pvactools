@@ -1,0 +1,21 @@
+# Stage 1: Get samtools from biocontainer
+FROM staphb/samtools:latest AS samtools_stage
+
+# Stage 2: Get tabix and bgzip from htslib container
+FROM quay.io/biocontainers/htslib:1.22.1--h566b1c6_0 AS htslib_stage
+
+# Stage 3: Base image with regtools
+FROM griffithlab/regtools:latest
+USER root
+
+# Copy samtools binaries and libs
+COPY --from=samtools_stage /usr/local/bin/samtools /usr/local/bin/samtools
+COPY --from=samtools_stage /usr/share /usr/share
+COPY --from=samtools_stage /lib /lib
+COPY --from=samtools_stage /lib64 /lib64
+
+# Copy tabix and bgzip binaries from htslib container
+COPY --from=htslib_stage /usr/local/bin/ /usr/local/bin/
+COPY --from=htslib_stage /usr/local/lib/ /usr/local/lib/
+COPY --from=htslib_stage /usr/local/include/ /usr/local/include/
+COPY --from=htslib_stage /usr/local/share/ /usr/local/share/

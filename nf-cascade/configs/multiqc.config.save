@@ -1,0 +1,24 @@
+process {
+    // Default resources for all processes
+    cpus = 10
+    memory = '70.GB'
+
+    // Example: specific process override
+    // withName: 'MULTIQC' {
+    //     container = 'community.wave.seqera.io/library/multiqc:1.22.1--4886de6095538010'
+    //     cpus = 2         // optional: override default for this process
+    //     memory = '4 GB'  // optional: override default for this process
+    // }
+
+    withName: "NFCORE_HLATYPING.*" {
+       cpus = 10
+       memory = '70.GB' 
+    }
+
+}
+
+process {
+  withName: 'NFCORE_SAREK:SAREK:BAM_APPLYBQSR:GATK4_APPLYBQSR' {
+    time = '15h'
+  }
+}

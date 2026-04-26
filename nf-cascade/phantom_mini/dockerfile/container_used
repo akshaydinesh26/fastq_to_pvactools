@@ -1,0 +1,9 @@
+#container	tools
+quay.io/biocontainers/vt:2015.11.10--h5ef6573_4	-vt 
+ensemblorg/ensembl-vep:release_113.0	-vep
+quay.io/biocontainers/bam-readcount:1.0.1--h9aeec6d_3	-bamreadcout helper
+pcv/pvactools_plus:5.4.1	-pvacsaeq ( griffithlab/pvactools base to which hstlib added)
+mgibio/bam_readcount_helper-cwl:1.2.1	-bam readcount py
+griffithlab/vatools:5.2.0	-vatools
+pcv/regtools_plus:1	-regtools ( griffithlab/regtools base to which samtools hstlib added)
+

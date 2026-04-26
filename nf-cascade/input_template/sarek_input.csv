@@ -1,0 +1,3 @@
+patient,sample,sex,status,lane,fastq_1,fastq_2
+${patient},${patient}T,${sex},1,lane_1,${tumor_dna_fastq_1},${tumor_dna_fastq_2}
+${patient},${patient}P,${sex},0,lane_2,${normal_dna_fastq_1},${normal_dna_fastq_2}

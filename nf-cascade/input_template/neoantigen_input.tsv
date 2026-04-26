@@ -1,0 +1,2 @@
+PATIENT	MUTECT_VCF	DNA_CRAM	RNA_BAM	RSEM_GENE	RSEM_TX	HLA_ALLELES	RNA_FUSION
+${patient}	${vcf}	${tumorCram}	${rnaBam}	${geneCount}	${trCount}	${hlaString}	${fusionFile}

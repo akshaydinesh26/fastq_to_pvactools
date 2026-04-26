@@ -1,0 +1,58 @@
+reference_GRCH37/
+├── epiTOPes_v7_immunogenic_peptides.virus.final.txt
+├── human
+│   ├── human.reference.proteome.fasta
+│   └── star_2.7.10b
+│       ├── chrLength.txt
+│       ├── chrNameLength.txt
+│       ├── chrName.txt
+│       ├── chrStart.txt
+│       ├── exonGeTrInfo.tab
+│       ├── exonInfo.tab
+│       ├── gencode.v43lift37.All_Genes.txt
+│       ├── gencode.v43lift37.annotation.gtf
+│       ├── gencode.v43lift37.annotation_LUT.gtf
+│       ├── gencode.v43lift37.Protein_Coding_Genes.txt
+│       ├── geneInfo.tab
+│       ├── Genome
+│       ├── genomeParameters.txt
+│       ├── human_g1k_v37.dict
+│       ├── human_g1k_v37.fasta
+│       ├── human_g1k_v37.fasta.fai
+│       ├── Log.out
+│       ├── reference.gtf
+│       ├── reference.LUT.gtf
+│       ├── reference.Protein_Coding_Genes.txt
+│       ├── SA
+│       ├── SAindex
+│       ├── sjdbInfo.txt
+│       ├── sjdbList.fromGTF.out.tab
+│       ├── sjdbList.out.tab
+│       ├── STARmanual_2.7.10b.pdf
+│       └── transcriptInfo.tab
+├── human.reference.proteome.fasta
+├── reference.LUT.human.gtf
+├── reference.LUT.virus.gtf
+├── reference.proteome.virus.fasta
+└── virus
+    └── star_2.7.10b
+        ├── chrLength.txt
+        ├── chrNameLength.txt
+        ├── chrName.txt
+        ├── chrStart.txt
+        ├── Genome
+        ├── genomeParameters.txt
+        ├── ids
+        ├── Log.out
+        ├── reference.fasta
+        ├── reference.gtf
+        ├── reference.LUT.gtf
+        ├── SA
+        ├── SAindex
+        ├── VirusesGenomicSequences.dict
+        ├── VirusesGenomicSequences.fasta
+        ├── VirusesGenomicSequences.fasta.fai
+        ├── Viruses.gtf
+        └── Viruses_LUT.txt
+
+5 directories, 51 files

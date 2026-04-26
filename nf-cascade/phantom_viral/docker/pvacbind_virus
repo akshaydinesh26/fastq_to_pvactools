@@ -1,0 +1,19 @@
+#pcv/pvacbind_virus:1
+# Stage 1: Get HTSlib tools (tabix, bgzip, and libs)
+FROM quay.io/biocontainers/htslib:1.22.1--h566b1c6_0 AS htslib_stage
+
+# Stage 2: Base image with pvactools
+FROM griffithlab/pvactools:5.4.1
+USER root
+
+# Copy your Python scripts into the container
+COPY pyscripts/ /pyscripts/
+
+# Set working directory
+WORKDIR /mnt
+
+# Ensure scripts are executable
+RUN chmod -R +x /pyscripts
+
+# Optional: ensure shared libraries are linked
+RUN ldconfig

@@ -1,0 +1,4 @@
+cpus                         : 14
+dna_fasta                    : "/backup/volume/common_files/igenomes/GATK_GRCh38/Homo_sapiens/GATK/GRCh38/Sequence/WholeGenomeFasta/Homo_sapiens_assembly38.fasta"
+dna_gtf                      : "/backup/volume/common_files/gencode.v47.primary_assembly.annotation.gtf"
+max_memory                   : null

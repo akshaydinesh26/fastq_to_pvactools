@@ -1,0 +1,61 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV CONDA_DIR=/opt/conda
+ENV PATH=$CONDA_DIR/bin:$PATH
+
+# --- 1. Install system dependencies ---
+RUN apt-get update && apt-get install -y software-properties-common && \
+    add-apt-repository universe && \
+    apt-get update && \
+    apt-get install -y \
+    python3 \
+    python3-pip \
+    libstdc++6 \
+    git \
+    gcc \
+    make \
+    curl \
+    zlib1g-dev \
+    libbz2-dev \
+    liblzma-dev \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libncurses5 \
+    libncursesw5 \
+    libz-dev \
+    mafft \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# --- 2. Copy tools to /opt ---
+COPY MixMHC2pred-2.0 /opt/MixMHC2pred-2.0
+COPY MixMHCpred-3.0 /opt/MixMHCpred-3.0
+COPY PRIME-2.0 /opt/PRIME-2.0
+COPY pyscripts /opt/pyscripts
+
+
+
+RUN pip3 install -r /opt/MixMHCpred-3.0/code/setup_pythonLibrary.txt
+RUN pip3 install biopython
+# --- 3. Make tools executable and add symlinks ---
+RUN chmod +x /opt/MixMHC2pred-2.0/MixMHC2pred_unix && \
+    chmod +x /opt/MixMHCpred-3.0/MixMHCpred && \
+    chmod +x /opt/MixMHCpred-3.0/install_packages && \
+    chmod +x /opt/MixMHCpred-3.0/setup_path && \
+    chmod +x /opt/PRIME-2.0/PRIME && \
+    ln -s /opt/MixMHC2pred-2.0/MixMHC2pred_unix /usr/local/bin/MixMHC2pred && \
+    ln -s /opt/MixMHCpred-3.0/MixMHCpred /usr/local/bin/MixMHCpred && \
+    ln -s /opt/PRIME-2.0/PRIME /usr/local/bin/PRIME
+
+# --- 4. Run setup_path script ---
+WORKDIR /opt/MixMHCpred-3.0
+RUN ./setup_path
+WORKDIR /opt/PRIME-2.0/lib
+RUN g++ -O3 PRIME.cc -o PRIME.x
+
+
+# (Optional) Reset WORKDIR
+WORKDIR /
+RUN chmod -R 777 /opt
+# Done
+

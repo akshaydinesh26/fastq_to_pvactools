@@ -1,0 +1,15 @@
+# Stage 1: Get HTSlib tools (tabix, bgzip, and libs)
+FROM quay.io/biocontainers/htslib:1.22.1--h566b1c6_0 AS htslib_stage
+
+# Stage 2: Base image with pvactools
+FROM griffithlab/pvactools:5.4.1
+USER root
+
+# Copy tabix, bgzip, and entire HTSlib from htslib_stage
+COPY --from=htslib_stage /usr/local/bin/ /usr/local/bin/
+COPY --from=htslib_stage /usr/local/lib/ /usr/local/lib/
+COPY --from=htslib_stage /usr/local/include/ /usr/local/include/
+COPY --from=htslib_stage /usr/local/share/ /usr/local/share/
+
+# Optional: ensure shared libraries are linked
+RUN ldconfig

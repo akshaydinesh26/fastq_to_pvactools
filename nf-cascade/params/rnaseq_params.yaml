@@ -1,0 +1,10 @@
+multiqc_title                : 'rnaseq_neoantigen'
+fasta                        : '/backup/volume/common_files/RNAseq_ref/genome.fa'
+gtf                          : '/backup/volume/common_files/RNAseq_ref/genes.gtf'
+star_index                   : '/backup/volume/common_files/RNAseq_ref/STAR_INDEX'
+gencode                      : true
+trimmer                      : 'fastp'
+remove_ribo_rna              : true
+aligner                      : 'star_rsem'
+skip_qc                      : true
+skip_pseudo_alignment        : true

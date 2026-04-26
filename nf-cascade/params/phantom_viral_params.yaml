@@ -1,0 +1,6 @@
+cpus                             : 14
+fastp_length_required            : 0
+fastp_qualified_quality_phred    : 0
+fastp_unqualified_percent_limit  : 0
+
+
