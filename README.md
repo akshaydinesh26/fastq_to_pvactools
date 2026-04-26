@@ -1,19 +1,18 @@
-# PHANTOM  
-**Personalized Human ANtigen Target Output Module**
+# fastq_to_pvactools
 
 ## Overview
 
 **Version:** 01  
 
-PHANTOM is a comprehensive pipeline that integrates:
+fastq_to_pvactools is a comprehensive pipeline that integrates:
 
 - Somatic variant calling from tumor-normal WES data  
 - RNA-seq expression analysis  
 - Gene fusion detection  
 - HLA typing  
-- Neoantigen prediction  
+- neo peptide identification
 
-It combines multiple nf-core workflows along with custom modules to generate prioritized neoantigen candidates for personalized cancer research.
+It combines multiple nf-core workflows along with custom modules to generate neo peptides
 
 ---
 
@@ -46,12 +45,12 @@ It combines multiple nf-core workflows along with custom modules to generate pri
 #### Tronflow (optional)
 - Predicts MHC Class II alleles from normal WES  
 
-#### Phantommini
-- Core neoantigen prediction module  
+#### vcf_to_pvactools
+- Core neopeptide prediction module  
 - Integrates outputs from all preprocessing workflows  
 - Uses:
   - pvacseq (SNVs/indels)
-  - pvacfuse (fusion-derived neoantigens)
+  - pvacfuse (fusion-derived neopeptides)
   - pvacsplice (splice variants)
 
 ---
